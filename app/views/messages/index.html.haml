@@ -1,9 +1,35 @@
-.header
-  .header__home
-    Home
-    .icon
-      .icon__cog
+.body
+  .group
+    グループ制作
+  .header
+    .header__home
+      .header__home__font
+        Home
+    .header__icon
+      .header__icon__cog
+        =link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'btn'
+    .header__icon___cogs
+      = link_to "#",class:"header__icon__sign-out" do
+        = icon('fas','cog',class:"header__icon__sign-out")
+      .header__icon__sign-out
         設定
-      = link_to "#",class:"icon__cog" do
-        =icon('fab','cog')
-      .icon__
+          
+  .left-side
+    .left-side__content
+      .left-side__content__form
+        = form_tag( method: :get, class: 'search-form') do
+          %input.search-form__input{name: "keyword", placeholder: "グループ検索", type: "text", value: ""}
+          %button.btn-search{title: "検索", type: "submit"}
+      .left-side__content__group
+        .left-side__content__group__groups
+          グループ名
+        .left-side__content__group__text
+          タイトル
+      .left-side__content__group    
+        .left-side__content__group__groups
+          グループ名2
+        .left-side__content__group__text
+          タイトル2
+        
+        
+
