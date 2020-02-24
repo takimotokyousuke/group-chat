@@ -1,6 +1,6 @@
 .body
   .group
-    グループ制作
+    = link_to "グループ制作",new_group_path,class:'gruop-btn'
   .header
     .header__home
       .header__home__font
@@ -8,11 +8,11 @@
     .header__icon
       .header__icon__cog
         =link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'btn'
-    .header__icon___cogs
-      = link_to "#",class:"header__icon__sign-out" do
-        = icon('fas','cog',class:"header__icon__sign-out")
-      .header__icon__sign-out
-        設定
+      .header__icon___cogs
+        = link_to "#",class:"header__icon__sign-out" do
+          = icon('fas','cog',class:"header__icon__sign-out")
+        .header__icon__sign-out
+          設定
           
   .left-side
     .left-side__content
@@ -21,15 +21,12 @@
           %input.search-form__input{name: "keyword", placeholder: "グループ検索", type: "text", value: ""}
           %button.btn-search{title: "検索", type: "submit"}
       .left-side__content__group
-        .left-side__content__group__groups
-          グループ名
-        .left-side__content__group__text
-          タイトル
-      .left-side__content__group    
-        .left-side__content__group__groups
-          グループ名2
-        .left-side__content__group__text
-          タイトル2
-        
+        - current_user.groups.each do |group|
+          .left-side__content__group__groups
+            = link_to '#' do
+              .left-side__content__group__groups__name
+                = group.name
+              .left-side__content__group__groups__text
+                メッセージ
         
 

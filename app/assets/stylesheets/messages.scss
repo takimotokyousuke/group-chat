@@ -45,6 +45,9 @@
             font-size: 20px;
           } 
         }
+        &__cogs{
+          margin-top: 30px;
+        }
         &__sign-out{
           font-size: 20px;
         }
@@ -59,12 +62,16 @@
         padding-left: 65px;
       }
       &__group{
-        display: flex;
         padding-top: 50px;
-        font-size: 20px;
-        &__text{
-          margin-left: 50px;
+        &__groups{
+          &__name{
+            font-size: 30px;
+          }
+          &__text{
+            margin-left: 50px;
+            font-size: 15px;
         }
+      }
       }
     }
   }
