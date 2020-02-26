@@ -1,0 +1,20 @@
+.body
+.header1
+  = link_to 'グループ編集', edit_group_path(@group), class:"header1__groupss", method: :get
+.content
+  .content__contents
+    .content__contents__font
+      - @chats.each do |chat|
+        .content__contents__font__fonts
+          = link_to chat.content
+    .content__contents__fontss
+      対あり
+.form
+  = form_with model: [@group,@chat] do |f|
+    = f.text_field :content, class: 'form__text', placeholder: '入力してね' 
+    .form__mask
+      = f.label :image,class: "form__mask__image" do
+        = icon('fas','image', class: 'form__mask__image' )
+        = f.file_field :image, class: 'hidden'
+    = f.submit'Send', class: 'form__send'
+ 
