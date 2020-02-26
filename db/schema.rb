@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2020_02_26_071104) do
+=======
+ActiveRecord::Schema.define(version: 2020_02_26_094400) do
+>>>>>>> Stashed changes
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", default: ""
@@ -23,6 +27,14 @@ ActiveRecord::Schema.define(version: 2020_02_26_071104) do
     t.index ["user_id"], name: "index_chats_on_user_id"
   end
 
+<<<<<<< Updated upstream
+=======
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> Stashed changes
   create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "group_id"
     t.bigint "user_id"
