@@ -5,8 +5,10 @@
   .content__contents
     .content__contents__font
       - @chats.each do |chat|
-        .content__contents__font__fonts
-          = link_to chat.content
+        - if chat.content.present?
+          .content__contents__font__fonts
+            = link_to chat.content,"/groups/#{chat.group_id}/chats/#{chat.id}"
+        = image_tag chat.image.url if chat.image.present?
     .content__contents__fontss
       対あり
 .form
@@ -18,3 +20,4 @@
         = f.file_field :image, class: 'hidden'
     = f.submit'Send', class: 'form__send'
  
+/groups/:group_id/chats/:id(.:format)  

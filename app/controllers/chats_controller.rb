@@ -1,10 +1,10 @@
 class ChatsController < ApplicationController
 
-  before_action :set_group,only:[:index,:create,:edit]
+  before_action :set_group,only:[:index,:create,:edit,:show]
 
   def index
     @chat = Chat.new
-    @chats = @group.chats.select("content")
+    @chats = @group.chats
     end
 
   def create
@@ -22,7 +22,12 @@ class ChatsController < ApplicationController
   def edit
 
   end
-  
+
+  def show
+    @chat = Chat.find(params[:id])
+    @comment =  Comment.new
+    @comments = @chat.comments.includes(:user)
+  end
 
   private
 

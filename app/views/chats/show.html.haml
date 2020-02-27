@@ -1,0 +1,15 @@
+
+
+.container
+  コメント
+  - if current_user
+    = form_with(model: [@group,@chat,@comment],local: true) do |f|
+      = f.text_field :content, placeholder: "コメントする", rows: "2"
+      = f.submit "SEND"
+  - else
+    %strong
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+.comments
+  %h4 ＜コメント一覧＞
+    
