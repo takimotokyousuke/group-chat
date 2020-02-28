@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
 
   def create
-    #binding.pry
+    @chat = Chat.find(params[:chat_id])
     @comment = Comment.create(comment_params)
-    redirect_to group_chats_path
+    redirect_to "/groups/#{@chat.group_id}/chats/#{@chat.id}"
   end
   
 

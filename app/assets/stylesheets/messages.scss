@@ -3,16 +3,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
-.body{
-  height: 100%;
+.html{
+  height: 100vh;
+  width: 100vw;
+}
+.content{
+  height: 100vh;
   width: 100vw;
   text-align: center;
   background-image: url(PAKU2028texture1994.jpg);
   background-size: cover;
-  opacity: 0.5;
-  vertical-align: bottom;
+  text-align: center;
+  vertical-align: top;
   position: relative;
   }
   .group{
@@ -43,6 +46,9 @@
           line-height: 100px;
           .btn{
             font-size: 20px;
+            color: #00ffff;
+            border-radius: 10px;
+            border: solid 3px  #66ffff;
           } 
         }
         &__cogs{
@@ -50,6 +56,7 @@
         }
         &__sign-out{
           font-size: 20px;
+
         }
         }
         }
@@ -64,6 +71,9 @@
       &__group{
         padding-top: 50px;
         &__groups{
+          color: #00ffff;
+          border-radius: 10px;
+          border: solid 3px  #66ffff;
           &__name{
             font-size: 30px;
           }
