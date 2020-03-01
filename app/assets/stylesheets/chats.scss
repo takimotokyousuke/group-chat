@@ -4,7 +4,7 @@
   padding: 0;
 }
 .body{
-  width: 100vh;
+  width: 100%;
 }
 .header1{
   width: 100%;
@@ -17,10 +17,16 @@
   &__name{
     font-size: 50px;
     text-align: center;
-    font-family: monospace;
+    font-family: 'Yeon Sung', ;
     color: #ff1a6f;
     padding-top: 10px;
     margin-left: 100px;
+    &__user{
+      font-size: 20px;
+      color: #FF570D;
+      display: flex;
+      line-height: 10px;
+    }
   }
   &__groupss{
     font-size: 20px;
@@ -42,8 +48,8 @@
     }
   }
 }
-.content{
-  width: 100%;
+.content1{
+  width: 100vh;
   scroll-padding-top: 100px;
   height: 100vh;
   &__contents{
@@ -69,6 +75,7 @@
         vertical-align: middle;
         color: #505050;
         border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+        font-family: 'Yeon Sung', ;
       }
     }
     &__fontss{

@@ -8,7 +8,6 @@ class ChatsController < ApplicationController
     end
 
   def create
-    #binding.pry
     @chat = @group.chats.new(chats_params)
     if @chat.save
       redirect_to group_chats_path(@group), notice: 'メッセージが送信されました'

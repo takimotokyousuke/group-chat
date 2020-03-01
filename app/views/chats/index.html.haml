@@ -3,17 +3,21 @@
     = link_to 'グループ編集', edit_group_path(@group), class:"header1__groupss", method: :get
     .header1__name
       = @group.name
+      .header1__name__user
+        グループメンバー：
+        - @group.users.each do |user|
+          = user.name
     .header1__home
       =link_to'ホーム', root_path,class:"header1__home__homes"
-  .content
-    .content__contents
-      .content__contents__font
+  .content1
+    .content1__contents
+      .content1__contents__font
         - @chats.each do |chat|
           - if chat.content.present?
-            .content__contents__font__fonts
+            .content1__contents__font__fonts
               = link_to chat.content,"/groups/#{chat.group_id}/chats/#{chat.id}"
           = image_tag chat.image.url if chat.image.present?
-      .content__contents__fontss
+      .content1__contents__fontss
         対あり
   .form
     = form_with model: [@group,@chat] do |f|

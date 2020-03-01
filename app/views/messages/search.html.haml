@@ -1,6 +1,6 @@
 .content
   .group
-    = link_to "グループ制作",new_group_path,class:'btn1'
+    = link_to "グループ制作",new_group_path,class:'gruop-btn'
   .header
     .header__home
       .header__home__font
@@ -17,13 +17,12 @@
     .left-side__content
       .left-side__content__form
         グループ検索
-        = form_with(url: search_messages_path,method: :get, local: true ) do |f|
+        = form_with(url: "groups/#{:group_id}/messages/search",method: :get, local: true ) do |f|
           = f.text_field :name
           = f.submit :search
         .left-side__content__form__name
           Name
-          - @groups.each do |group|
-            = group.name
+          = @group.name
  
       .left-side__content__group
         - current_user.groups.each do |group|

@@ -9,7 +9,6 @@
   width: 100vw;
 }
 .content{
-  height: 100vh;
   width: 100vw;
   text-align: center;
   background-image: url(PAKU2028texture1994.jpg);
@@ -23,20 +22,27 @@
     position: absolute;
     top:50px;
     left: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: solid 3px  #66ffff;
+    &__btn1{
+      color: #00ffff;
+    }
   }
   .header{
     height: 100px;
     display: flex;
     justify-content: space-between;
     padding-right: 200px;
+    background-color: #ffabce;
     &__home{
       &__font{
       width: 100%;
       height: 100px;
-      color: #009900;
+      color: #ff1a6f;
       font-size: 90px;
       padding-left: 40vw;
-      font-family: monospace;
+      font-family: 'Yeon Sung', ;
       }
     }
     &__icon{
