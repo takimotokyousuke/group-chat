@@ -20,7 +20,7 @@
       .content1__contents__fontss
         対あり
   .form
-    = form_with model: [@group,@chat] do |f|
+    = form_with model: [@group,@chat], local:true, class:"form__forms" do |f|
       = f.text_field :content, class: 'form__text', placeholder: '入力してね' 
       .form__mask
         = f.label :image,class: "form__mask__image" do

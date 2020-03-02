@@ -2,6 +2,9 @@
   .group
     = link_to "グループ制作",new_group_path,class:'btn1'
   .header
+    .header__name
+      マイネーム:
+      =current_user.name
     .header__home
       .header__home__font
         Home

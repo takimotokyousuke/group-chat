@@ -35,6 +35,10 @@
     justify-content: space-between;
     padding-right: 200px;
     background-color: #ffabce;
+    &__name{
+      color: red;
+      font-size: 15px;
+    }
     &__home{
       &__font{
       width: 100%;
