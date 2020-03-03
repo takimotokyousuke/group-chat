@@ -7,4 +7,5 @@ class MessagesController < ApplicationController
   def search
       @group = Group.find_by(name: params[:name])
   end
+
 end

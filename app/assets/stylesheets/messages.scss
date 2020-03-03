@@ -52,7 +52,6 @@
     &__icon{
         display: flex;
         &__cog{
-          font-size: 20px;
           line-height: 100px;
           .btn{
             font-size: 20px;
@@ -62,11 +61,17 @@
           } 
         }
         &__cogs{
-          margin-top: 30px;
-        }
-        &__sign-out{
-          font-size: 20px;
-
+          line-height: 100px;
+          .btn2{
+            margin-left: 5px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            line-height: 4px;
+            font-size: 20px;
+            color: #00ffff;
+            border-radius: 10px;
+            border: solid 3px  #66ffff;
+          }
         }
         }
         }

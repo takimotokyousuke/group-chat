@@ -4,14 +4,13 @@ class ChatsController < ApplicationController
 
   def index
     @chat = Chat.new
-    @chats = @group.chats
+    @chats = @group.chats.includes(:user)
     end
 
   def create
     @chat = @group.chats.new(chats_params)
     if @chat.save
       respond_to do |format|
-        format.html {redirect_to group_chats_path(@group), notice: 'メッセージが送信されました'}
         format.json
       end
     else

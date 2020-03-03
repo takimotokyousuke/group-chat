@@ -11,11 +11,8 @@
     .header__icon
       .header__icon__cog
         =link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'btn'
-      .header__icon___cogs
-        = link_to "#",class:"header__icon__sign-out" do
-          = icon('fas','cog',class:"header__icon__sign-out")
-        .header__icon__sign-out
-          設定
+      .header__icon__cogs
+        = link_to "設定",class: "btn2"
   .left-side
     .left-side__content
       .left-side__content__form

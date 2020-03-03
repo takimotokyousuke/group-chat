@@ -7,6 +7,7 @@
         グループメンバー：
         - @group.users.each do |user|
           = user.name
+          =','
     .header1__home
       =link_to'ホーム', root_path,class:"header1__home__homes"
   .content1
@@ -18,7 +19,6 @@
               = link_to chat.content,"/groups/#{chat.group_id}/chats/#{chat.id}"
           = image_tag chat.image.url if chat.image.present?
       .content1__contents__fontss
-        対あり
   .form
     = form_with model: [@group,@chat], local:true, class:"form__forms" do |f|
       = f.text_field :content, class: 'form__text', placeholder: '入力してね' 

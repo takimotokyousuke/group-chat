@@ -1,6 +1,16 @@
 .chat-group-form
   %h1 チャットグループ編集
+  =link_to"ホーム",root_path
   .chat-group-form__destroy
     =link_to "削除",group_path, method: :delete
-  .chat-group-form__add
-    =link_to "グループメンバー追加"
+  = form_with(model:@group,local: true) do |f|
+    .chat-group-form__field.clearfix
+      .chat-group-form__field.clearfix
+        .chat-group-form__field--left
+          %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+        .chat-group-form__field--right
+          = f.collection_check_boxes :user_ids, User.all, :id, :name
+      .chat-group-form__field.clearfix
+        .chat-group-form__field--left
+        .chat-group-form__field--right
+          = f.submit'メンバー追加',class:"chat-group-form__field--right__btn"

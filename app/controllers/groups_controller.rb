@@ -1,7 +1,9 @@
 class GroupsController < ApplicationController
   before_action except:[:index]
   def index
-    @group = Group.all
+    @users = User.all
+    @group = Group.find(params[:id])
+    
   end
 
   def new
@@ -9,6 +11,7 @@ class GroupsController < ApplicationController
     
   end
   def create
+    @group = Group.new
     @group = Group.create(group_params)
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
@@ -18,18 +21,17 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    
+    @group = Group.find(params[:id])
   end
 
   def destroy
-    group = Group.find(params[:id])
-    group.destroy
+    @group = Group.find(params[:id])
+    @group.destroy
     redirect_to root_path 
   end
 
-  
   def update
-    @group = find(params[:id])
+    @group = Group.find(params[:id])
     if @group.update(group_params)
       redirect_to root_path, notice: 'グループを更新しました'
     else
