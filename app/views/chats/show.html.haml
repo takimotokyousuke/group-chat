@@ -1,0 +1,29 @@
+.header2
+  =link_to 'グループチャットへ',group_chats_path,class: "header2__h1"
+.contents
+  .contents__content
+    = @chat.content
+    = @chat.image
+
+.container
+  コメント
+  - if current_user
+    = form_with(model: [@group,@chat,@comment],local: true) do |f|
+      = f.text_field :content, placeholder: "コメントする", rows: "2"
+      = f.submit "SEND"
+  - else
+    %strong
+      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+.comments
+  %h4 ＜コメント一覧＞
+.comment
+  .comment__itiran
+  - if @comments
+    .comment__itiran__co1
+      - @comments.each do |comment|
+        .comment__itran__co1__co2
+          = comment.user.name
+          =":"
+          = comment.content
+          = comment.image

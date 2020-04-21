@@ -1,35 +1,36 @@
-.body
+.content
   .group
-    グループ制作
+    = link_to "グループ制作",new_group_path,class:'btn1'
   .header
+    .header__name
+      マイネーム:
+      =current_user.name
     .header__home
       .header__home__font
-        Home
+        グループチャット
     .header__icon
       .header__icon__cog
         =link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'btn'
-    .header__icon___cogs
-      = link_to "#",class:"header__icon__sign-out" do
-        = icon('fas','cog',class:"header__icon__sign-out")
-      .header__icon__sign-out
-        設定
-          
+      .header__icon__cogs
   .left-side
     .left-side__content
       .left-side__content__form
-        = form_tag( method: :get, class: 'search-form') do
-          %input.search-form__input{name: "keyword", placeholder: "グループ検索", type: "text", value: ""}
-          %button.btn-search{title: "検索", type: "submit"}
+        グループ検索
+        = form_with(url: search_messages_path,method: :get, local: true ) do |f|
+          = f.text_field :name
+          = f.submit :search
+        .left-side__content__form__name
+          Name
+          - @groups.each do |group|
+            = group.name
+ 
       .left-side__content__group
-        .left-side__content__group__groups
-          グループ名
-        .left-side__content__group__text
-          タイトル
-      .left-side__content__group    
-        .left-side__content__group__groups
-          グループ名2
-        .left-side__content__group__text
-          タイトル2
-        
+        - current_user.groups.each do |group|
+          .left-side__content__group__groups
+            = link_to group_chats_path(group) do
+              .left-side__content__group__groups__name
+                = group.name
+              .left-side__content__group__groups__text
+                = group.show_last_message
         
 

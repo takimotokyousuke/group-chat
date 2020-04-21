@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.body{
+  width: 100%;
+}
+.header1{
+  width: 100%;
+  background-color: #ffabce;
+  position: sticky;
+  height: 100px;
+  top: 0;
+  position: relative;
+  z-index: 1;
+  &__name{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Yeon Sung', ;
+    color: #ff1a6f;
+    padding-top: 10px;
+    margin-left: 100px;
+    &__user{
+      font-size: 20px;
+      color: #FF570D;
+      display: flex;
+      line-height: 10px;
+    }
+  }
+  &__groupss{
+    font-size: 20px;
+    color: #00ffff;
+    border-radius: 10px;
+    border: solid 3px  #66ffff;
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+  }
+  &__home{
+    &__homes{
+      font-size: 20px;
+      color: #00ffff;
+      border-radius: 10px;
+      border: solid 3px  #66ffff;
+      position: absolute;
+      top:0;
+    }
+  }
+}
+.content1{
+  width: 100%;
+  scroll-padding-top: 100px;
+  height: 100vh;
+  background-color: #CCFFFF;
+  &__contents{
+    height: 100%;
+    width: 100vh;
+    padding: 20px;
+    display: flex;
+    &__font{
+      font-size: 30px;
+      border-radius: 10px;
+      border: solid 3px #6091d3;
+      width: 50vw;
+      overflow: scroll;
+      &__fonts{
+        height: auto;
+        font-size: 30px;
+        flex-direction: column;
+        position: relative;
+        list-style-type: none!important;/*ポチ消す*/
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        background: #dbebf8;
+        vertical-align: middle;
+        color: #505050;
+        border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+        font-family: 'Yeon Sung', ;
+      }
+    }
+    &__fontss{
+      float: right;
+      font-size: 30px;
+      width: 50vh;
+      margin-left: 30px;
+      border-radius: 10px;
+      border: solid 3px #ff7d6e;
+
+    }
+
+  }
+}
+.form{
+  bottom: 0;
+  height: 140px;
+  width: 100vw;
+  background-color: #d2d2d2;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  input[type="text"]{
+    padding-left: 10px;
+    margin-right: 15px;
+    width: 1000px;
+    height:100px;
+  }
+  &__mask{
+    float: left;
+    height: 50px;
+    position: relative;
+    &__image{
+      font-size: 20px;
+      position: absolute;
+      left: 480px;
+      top: 10px;
+      .hidden{
+        display: none;
+      }
+  }
+}
+    &__send{
+      color: white;
+      font-size: 16px;
+      width: 100px;
+      height: 80px;
+      margin-right: 40px;
+      background-color: #66FFCC;
+      float: right;
+      position: absolute;
+  }
+
+}
+
+.contents{
+  padding: 0.5em 1em;
+  font-weight: bold;
+  color: #6091d3;
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+  height: 350px;
+  &__content{
+    font-size: 40px;
+  }
+}
+
+.header2{
+  height: 50px;
+  width: 100vw;
+  background-color: #ffabce;
+  &__h1{
+    font-size: 20px;
+    color: #00ffff;
+    border-radius: 10px;
+    border: solid 3px  #66ffff;
+    float: right;
+  }
+}
+.container{
+  font-size: 20px;
+  width: 100vh;
+  height: 100px;
+  margin-left: 300px;
+  margin-top: 50px;
+  }
+.comments{
+  margin-left: 350px;
+}
+.comment{
+  padding: 0.5em 1em;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  height: 100vh;
+}
+.comment__itran__co1__co2{
+  font-size: 20px;
+  position: relative;
+  list-style-type: none!important;/*ポチ消す*/
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  background: #dbebf8;
+  vertical-align: middle;
+  color: #505050;
+  border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+  }
