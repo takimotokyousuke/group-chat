@@ -1,8 +1,8 @@
 class Group < ApplicationRecord
   has_many :group_users, dependent: :destroy
   has_many :users, through: :group_users,dependent: :destroy
-  has_many :chats
-  has_many :messages
+  has_many :chats,dependent: :destroy
+  has_many :messages,dependent: :destroy
   validates :name, presence: true, uniqueness: true
 
   def show_last_message

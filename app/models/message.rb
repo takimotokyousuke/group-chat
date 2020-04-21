@@ -7,3 +7,4 @@ class Message < ApplicationRecord
     Group.all 
   end
 end
+end
