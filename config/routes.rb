@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 end
   resources :groups, only: [:index,:new,:create,:edit,:update,:destroy] do
     resources :chats, only: [:index, :create, :show,:edit] do
+      resources :likes,only: [:create,:destroy] 
       resources :comments, only: [:create]
     end
   end

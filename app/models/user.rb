@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :groups, through: :group_users, dependent: :destroy
   has_many :chats
   has_many :comments
+  has_many :likes,dependent: :destroy
 end

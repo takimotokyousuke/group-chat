@@ -1,0 +1,9 @@
+-if user_signed_in?
+  -if @chat.like_user(current_user.id)
+    = link_to group_chat_like_path(like,chat_id: chat.id),method: :delete, id:"like-button",class:"icon",remote: true do
+      = icon('fas','thumbs-up')
+      =chat.like_count
+  - else
+    =button_to "お気に入り",group_chat_likes_path(chat.id),id: "like-button",remote: true do
+      = icon('far','thumbs-up')
+      =chat.like_count

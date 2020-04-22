@@ -14,11 +14,16 @@
     .content1__contents
       .content1__contents__font
         - @chats.each do |chat|
+          =chat.user.name
+          ="さんが投稿しました"
           - if chat.content.present?
             .content1__contents__font__fonts
               = link_to chat.content,"/groups/#{chat.group_id}/chats/#{chat.id}"
+              .content1__contents__font__fonts__like
+                =render"likes/like"
+
           = image_tag chat.image.url if chat.image.present?
-      .content1__contents__fontss
+
   .form
     = form_with model: [@group,@chat], local:true, class:"form__forms" do |f|
       = f.text_field :content, class: 'form__text', placeholder: '入力してね' 

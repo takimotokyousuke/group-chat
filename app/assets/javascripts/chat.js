@@ -6,12 +6,8 @@ $(function(){
       `<div class="content1">
         <div class="content1__contents">
           <div class="content1__contents__font">
-            <div class="content1__contents__font__fonts">
-              <div class="content1__contents__font__fonts__content">
-                ${chat.content}
-              </div>
-              <img src=${chat.image}>
-            </div>
+            ${chat.content}
+            <img src=${chat.image}>
           </div>
         </div>
       </div>`
@@ -21,11 +17,7 @@ $(function(){
         `<div class="content1">
           <div class="content1__contents">
             <div class="content1__contents__font">
-              <div class="content1__contents__font__fonts">
-                <div class="content1__contents__font__fonts__content">
-                  ${chat.content}
-                </div>
-              </div>
+              ${chat.content}
             </div>
           </div>
         </div>`

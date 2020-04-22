@@ -30,10 +30,12 @@ class ChatsController < ApplicationController
     @comments = @chat.comments.includes(:user)
   end
 
+ 
+
   private
 
   def chats_params
-    params.require(:chat).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:chat).permit(:content, :image,:likes_count).merge(user_id: current_user.id)
   end
 
   def set_group
