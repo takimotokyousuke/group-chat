@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#アプリ名
 
-Things you may want to cover:
+グループチャット(実装途中)
 
-* Ruby version
+#概要
 
-* System dependencies
+例えば、学校のクラスとかで先生が生徒に連絡あるとき先生からのチャット(お知らせ)はできるけど生徒からのチャットはできないようにしたいなと思って作成しました。目的としてはチャットの荒れやお知らせの埋もれをなくすためです。チャット自体にはコメントって形でチャットを残せます。
 
-* Configuration
+#実装予定
 
-* Database creation
+・いいね機能
 
-* Database initialization
+・通知機能
 
-* How to run the test suite
+・編集
 
-* Services (job queues, cache servers, search engines, etc.)
+・アプリとしてのビューを整える
 
-* Deployment instructions
-
-* ...
